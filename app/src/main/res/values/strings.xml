@@ -1,3 +1,9 @@
 <resources>
-    <string name="app_name">project3</string>
+    <string name="app_name">AFA</string>
+    <string name="register">회원가입</string>
+    <string name="login_email_hint">이메일</string>
+    <string name="login_password_hint">비밀번호</string>
+    <string name="signup_login_hint">이미 계정이 있으십니까? 로그인</string>
+    <string name="login_signup_hint">계정이 없으십니까? 회원가입</string>
+
 </resources>
