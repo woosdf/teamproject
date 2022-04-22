@@ -17,8 +17,28 @@
 
         <TextView
             style="@style/headerTextPrimary"
-            android:text="@string/register"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="ID / PW 찾기" />
+
+        <com.google.android.material.tabs.TabLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            app:tabIndicatorColor="#3C69FF"
+            app:tabSelectedTextColor="#3C69FF">
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/findid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ID" />
+
+            <com.google.android.material.tabs.TabItem
+                android:id="@+id/findpw"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="PASSWORD" />
+        </com.google.android.material.tabs.TabLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             style="@style/parent"
@@ -79,15 +99,7 @@
             style="@style/loginButton"
             android:layout_marginTop="@dimen/loginViewsMargin"
             android:layout_gravity="center"
-            android:text="회원가입" />
-
-        <TextView
-            style="@style/parent"
-            android:textAlignment="center"
-            android:textStyle="bold"
-            android:textColor="@color/primaryTextColor"
-            android:text="@string/signup_login_hint"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+            android:text="찾기" />
 
     </LinearLayout>
 </androidx.cardview.widget.CardView>

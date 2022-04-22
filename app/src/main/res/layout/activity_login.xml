@@ -11,9 +11,10 @@
     android:background="@color/whiteCardColor">
 
 
-
     <LinearLayout
         style="@style/linearParent"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
         android:layout_gravity="center"
         android:padding="@dimen/loginViewsMargin">
 
@@ -26,34 +27,48 @@
             android:id="@+id/textInputEmail"
             style="@style/parent"
             android:layout_marginTop="@dimen/loginViewsMargin">
+
             <EditText
                 android:id="@+id/editTextEmail"
                 style="@style/modifiedEditText"
+                android:hint="@string/login_email_hint"
                 android:inputType="textEmailAddress"
-                android:maxLines="1"
-                android:hint="@string/login_email_hint"/>
+                android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
             android:id="@+id/textInputPassword"
             style="@style/parent"
             android:layout_marginTop="@dimen/loginViewsMargin">
+
             <EditText
                 android:id="@+id/editTextPassword"
                 style="@style/modifiedEditText"
                 android:hint="@string/login_password_hint"
-                android:maxLines="1"
-                android:inputType="textPassword"/>
+                android:inputType="textPassword"
+                android:maxLines="1" />
+
         </com.google.android.material.textfield.TextInputLayout>
 
         <TextView
+            android:id="@+id/findertv"
             style="@style/viewParent"
             android:layout_gravity="end"
             android:layout_marginTop="10dp"
             android:onClick="viewForgotPAssword"
-            android:text="비밀번호를 잊었나요?"
+            android:text="ID/비밀번호 찾기"
             android:textColor="@color/primaryTextColor"
             android:textSize="@dimen/newsMoreTextSize" />
+
+        <TextView
+            android:id="@+id/register_tv"
+            style="@style/parent"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:onClick="viewRegisterClicked"
+            android:text="@string/login_signup_hint"
+            android:textAlignment="center"
+            android:textColor="@color/primaryTextColor"
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/cirLoginButton"
@@ -63,13 +78,51 @@
             android:text="로그인" />
 
         <TextView
-            style="@style/parent"
+            android:id="@+id/textView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:text="OR"
             android:textAlignment="center"
-            android:textStyle="bold"
-            android:textColor="@color/primaryTextColor"
-            android:text="@string/login_signup_hint"
-            android:onClick="viewRegisterClicked"
-            android:layout_marginTop="@dimen/loginViewsMargin"/>
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="62dp"
+            android:layout_marginTop="@dimen/loginViewsMargin"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="63dp">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_iv3"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_centerInParent="true"
+                    android:layout_gravity="center"
+                    android:src="@drawable/facebook_logo" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_iv2"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentLeft="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginLeft="50dp"
+                    android:src="@drawable/naver_logo" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/circle_iv"
+                    android:layout_width="55dp"
+                    android:layout_height="55dp"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerInParent="true"
+                    android:layout_marginRight="50dp"
+                    android:src="@drawable/google_logo" />
+            </RelativeLayout>
+        </LinearLayout>
 
 
     </LinearLayout>

@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--Home 화면-->
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context=".HomeActivity"
+    tools:showIn="@layout/app_bar_main"
+    style="@style/parent.contentLayout">
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <ImageView
+                    android:id="@+id/app_logo_vertical"
+                    style="@style/viewParent.headerText"
+                    android:layout_width="269dp"
+                    android:layout_height="match_parent"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_centerVertical="true"
+                    android:src="@drawable/app_logos" />
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/profileCircleImageView"
+                    android:layout_width="40dp"
+                    android:layout_height="60dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/iV"
+                    android:src="@drawable/users"
+                    app:civ_border_color="@color/imageBorderColor"
+                    app:civ_border_width="2dp" />
+
+                <ImageView
+                    android:id="@+id/iV"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_toRightOf="@id/app_logo_vertical"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="20dp"
+                    android:src="@drawable/ic_search" />
+            </RelativeLayout>
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginBottom="20dp"
+                    android:minHeight="200dp"
+                    app:cardBackgroundColor="@color/white"
+                    app:cardCornerRadius="16dp"
+                    app:cardPreventCornerOverlap="false">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="57dp"
+                        android:layout_gravity="center_vertical"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="0dp"
+                            android:layout_height="75dp"
+                            android:layout_weight="1"
+                            android:orientation="horizontal"
+                            android:padding="10dp">
+
+                            <ImageView
+                                android:id="@+id/imageView"
+                                android:layout_width="301dp"
+                                android:layout_height="54dp"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/camera" />
+
+                            <ImageView
+                                android:id="@+id/imageView2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                app:srcCompat="@drawable/gallery" />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                </androidx.cardview.widget.CardView>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp">
+
+                <TextView
+                    style="@style/viewParent.headerText"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentTop="true"
+                    android:text="Overview" />
+
+                <TextView
+                    style="@style/viewParent"
+                    android:layout_alignParentRight="true"
+                    android:layout_centerVertical="true"
+                    android:text="Filter"
+                    android:textColor="@color/primaryTextColor"
+                    android:textSize="@dimen/headerMoreTextSize"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tabs"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                app:tabIndicatorColor="#3C69FF"
+                app:tabSelectedTextColor="#3C69FF">
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/findid"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="OUTER" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/findpw"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="TOP" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/pants"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PANTS" />/>
+
+                <com.google.android.material.tabs.TabItem
+                    android:id="@+id/acc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="ACC" />/>
+            </com.google.android.material.tabs.TabLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycle"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager">
+
+                </androidx.recyclerview.widget.RecyclerView>
+
+            </LinearLayout>
+
+            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
+
+
+            <!--remove the below layout with recycler view, use card poplar courses as model for design-->
+
+        </LinearLayout>
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

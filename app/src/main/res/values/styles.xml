@@ -48,11 +48,6 @@
         <item name="android:backgroundTint">@color/primaryTextColor</item>
     </style>
 
-    <style name="viewParent">
-        <item name="android:layout_width">wrap_content</item>
-        <item name="android:layout_height">wrap_content</item>
-    </style>
-
     <style name="loginButton" parent="viewParent">
         <item name="android:background">@drawable/login_button_bk</item>
         <item name="android:textColor">@color/whiteTextColor</item>
@@ -61,6 +56,30 @@
 
 
     <!--onboarding designs-->
+    <!-- Base application theme. -->
+
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <!--styles for education app-->
+    <style name="viewParent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="parent.contentLayout">
+        <item name="android:background">@color/contentBodyColor</item>
+        <item name="android:padding">@dimen/normalPadding</item>
+    </style>
+
+    <style name="viewParent.headerText">
+        <item name="android:textColor">@color/contentTextColor</item>
+        <item name="android:textSize">@dimen/headerTextSize</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
 
 
 </resources>

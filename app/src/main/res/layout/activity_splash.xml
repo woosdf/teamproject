@@ -10,10 +10,10 @@
         android:orientation="vertical">
 
         <ImageView
-            android:id="@+id/imageView"
+            android:id="@+id/app_logo_vertical"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@drawable/app_title" />
+            app:srcCompat="@drawable/app_logo" />
 
     </LinearLayout>
 
